@@ -24,8 +24,8 @@ const error = require("fifit-error");
  * @throws {Error}
  */
 module.exports = (status, message, headers) => {
-	if (error[status |= 0]) {
-		throw new error[status](message, headers);
+	if (error.codes[status |= 0]) {
+		throw new error.codes[status](message, headers);
 	}
 	throw new error.Error(status, message, headers);
 };
