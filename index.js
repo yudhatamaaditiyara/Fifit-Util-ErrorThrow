@@ -18,9 +18,9 @@
 const error = require("fifit-error");
 
 /**
- * @param {number|void} status
- * @param {string|void} message
- * @param {Object|void} headers
+ * @param {(number|string)} [status]
+ * @param {string} [message]
+ * @param {Object} [headers]
  * @throws {Error}
  */
 module.exports = (status, message, headers) => {
@@ -31,9 +31,9 @@ module.exports = (status, message, headers) => {
 };
 
 /**
- * @param {number|void} status
- * @param {string|void} message
- * @param {Object|void} headers
+ * @param {(number|string)} [status]
+ * @param {string} [message]
+ * @param {Object} [headers]
  * @throws {Error}
  */
 module.exports.error = (status, message, headers) => {
@@ -41,9 +41,9 @@ module.exports.error = (status, message, headers) => {
 };
 
 /**
- * @param {number|void} status
- * @param {string|void} message
- * @param {Object|void} headers
+ * @param {(number|string)} [status]
+ * @param {string} [message]
+ * @param {Object} [headers]
  * @throws {Error}
  */
 module.exports.clientError = (status, message, headers) => {
@@ -51,9 +51,9 @@ module.exports.clientError = (status, message, headers) => {
 };
 
 /**
- * @param {number|void} status
- * @param {string|void} message
- * @param {Object|void} headers
+ * @param {(number|string)} [status]
+ * @param {string} [message]
+ * @param {Object} [headers]
  * @throws {Error}
  */
 module.exports.serverError = (status, message, headers) => {
