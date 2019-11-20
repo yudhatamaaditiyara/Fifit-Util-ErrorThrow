@@ -24,10 +24,10 @@ const error = require("fifit-error");
  * @throws {Error}
  */
 module.exports = (status, message, headers) => {
-	if (error.codes[status |= 0]) {
-		throw new error.codes[status](message, headers);
-	}
-	throw new error.Error(status, message, headers);
+  if (error.codes[status |= 0]) {
+    throw new error.codes[status](message, headers);
+  }
+  throw new error.Error(status, message, headers);
 };
 
 /**
@@ -37,7 +37,7 @@ module.exports = (status, message, headers) => {
  * @throws {Error}
  */
 module.exports.error = (status, message, headers) => {
-	throw new error.Error(status, message, headers);
+  throw new error.Error(status, message, headers);
 };
 
 /**
@@ -47,7 +47,7 @@ module.exports.error = (status, message, headers) => {
  * @throws {Error}
  */
 module.exports.clientError = (status, message, headers) => {
-	throw new error.ClientError(status, message, headers);
+  throw new error.ClientError(status, message, headers);
 };
 
 /**
@@ -57,5 +57,5 @@ module.exports.clientError = (status, message, headers) => {
  * @throws {Error}
  */
 module.exports.serverError = (status, message, headers) => {
-	throw new error.ServerError(status, message, headers);
+  throw new error.ServerError(status, message, headers);
 };
